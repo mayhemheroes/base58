@@ -1,0 +1,6 @@
+project: base58
+target: base58-fuzz
+
+cmds:
+  - cmd: /fuzz_base58.py
+    libfuzzer: true
