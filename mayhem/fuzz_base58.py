@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+import pdb
+
 import atheris
 import sys
 
@@ -11,7 +13,8 @@ def TestOneInput(data):
     encoded = b58encode(data)
     decoded = b58decode(encoded)
 
-    if encoded != decoded:
+    if data != decoded:
+        pdb.set_trace()
         raise RuntimeError("Encoded and decoded data are not equal")
 
 
